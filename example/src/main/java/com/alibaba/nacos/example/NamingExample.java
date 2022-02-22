@@ -42,12 +42,12 @@ public class NamingExample {
     public static void main(String[] args) throws NacosException, InterruptedException {
         
         Properties properties = new Properties();
-        properties.setProperty("serverAddr", System.getProperty("serverAddr"));
-        properties.setProperty("namespace", System.getProperty("namespace"));
+        properties.setProperty("serverAddr", "nacos://127.0.0.1:8848");
+        properties.setProperty("namespace", "public");
         
         NamingService naming = NamingFactory.createNamingService(properties);
         
-        naming.registerInstance("nacos.test.3", "11.11.11.11", 8888, "TEST1");
+        naming.registerInstance("nacos.test.3", "127.0.0.1", 8848, "TEST1");
         
         System.out.println("instances after register: " + naming.getAllInstances("nacos.test.3"));
         
