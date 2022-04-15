@@ -43,6 +43,10 @@ public class Constants {
         public static final String SPLITTER = ":";
         
         public static final String ANY = "*";
+        
+        public static final String ACTION = "action";
+    
+        public static final String REQUEST_CLASS = "requestClass";
     }
     
     public static class Identity {
